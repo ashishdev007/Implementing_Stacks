@@ -39,6 +39,9 @@ public class ArrayImplement<E> implements StackInt<E> {
     }
 
     public String toString(){
+        if (this.empty()){
+            throw new EmptyStackException();
+        }
         String st = "";
         for (int i = 0; i < list.size(); i++) {
             st += list.get(i) + " ";
