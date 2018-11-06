@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 
 public class ArrayImplement<E> implements StackInt<E> {
 
@@ -8,17 +9,25 @@ public class ArrayImplement<E> implements StackInt<E> {
         list = new ArrayList<>();
     }
 
-    public E push(E obje){
-        return (E) "as";
+    public E push(E obj){
+        list.add(obj);
+        return obj;
     }
 
     @Override
     public E peek() {
-        return null;
+        if (this.empty()){
+            throw new EmptyStackException();
+        }
+
+        return list.get(list.size() - 1);
     }
 
     public E pop(){
-       return (E) "Ssf";
+        if (this.empty()) {
+            throw new EmptyStackException();
+        }
+        return list.remove(list.size() - 1);
    }
 
     @Override
