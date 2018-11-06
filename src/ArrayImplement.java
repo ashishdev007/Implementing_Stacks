@@ -37,4 +37,12 @@ public class ArrayImplement<E> implements StackInt<E> {
         }
         return false;
     }
+
+    public String toString(){
+        String st = "";
+        for (int i = 0; i < list.size(); i++) {
+            st += list.get(i) + " ";
+        }
+        return st;
+    }
 }
