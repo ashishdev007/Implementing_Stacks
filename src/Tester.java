@@ -6,6 +6,19 @@ public class Tester {
         stack.push("b");
         stack.push("c");
 
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack);
+        System.out.println(stack.pop());
+
+        try {
+            System.out.println(stack);
+            System.out.println(stack.peek());
+        } catch (Exception e) {
+            System.out.println("Error");
+        }
     }
 
 }
